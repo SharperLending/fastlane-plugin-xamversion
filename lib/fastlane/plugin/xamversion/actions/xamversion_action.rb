@@ -23,8 +23,7 @@ module Fastlane
         if values[:bump] &&
             !values[:version] &&
             !values[:build] &&
-            !values[:readonly]
-          updated_version = do_version_bump_interactive(current_version)
+          updated_version = current_version
 
           puts "Update version: #{updated_version}"
           new_version, new_build = set_version(
